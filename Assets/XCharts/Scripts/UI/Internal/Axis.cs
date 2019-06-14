@@ -219,7 +219,7 @@ namespace XCharts
             }
             else
             {
-                float rate = dataCount / GetSplitNumber(dataZoom);
+                float rate = dataCount / (GetSplitNumber(dataZoom)-1);
                 if (rate < 1) rate = 1;
                 int offset = m_BoundaryGap ? (int)(rate / 2) : 0;
                 int newIndex = (int)(index * rate >= dataCount - 1 ?
